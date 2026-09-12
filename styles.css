@@ -769,3 +769,65 @@ p:last-child { margin-bottom: 0; }
     justify-content: center;
   }
 }
+
+/* -----------------------------------------------------------------------
+   SERVICE CARDS (services.html)
+   ----------------------------------------------------------------------- */
+.service-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 22px 22px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.service-card:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+
+.service-card__icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+.service-card__icon svg { width: 24px; height: 24px; }
+
+.service-card h3 { font-size: 1.15rem; margin: 0 0 4px; }
+.service-card p { font-size: 0.93rem; margin: 0; }
+
+.service-card__list { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+.service-card__list li {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  padding-left: 18px;
+  position: relative;
+}
+.service-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.55em;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.service-card .link-arrow { margin-top: auto; padding-top: 10px; font-weight: 600; font-size: 0.9rem; }
+
+/* Dark-section variant, for the CTA block */
+.section-dark .service-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.10);
+}
+.section-dark .service-card h3 { color: var(--on-dark); }
+.section-dark .service-card p,
+.section-dark .service-card__list li { color: var(--on-dark-muted); }
+.section-dark .service-card__icon {
+  background: rgba(62, 156, 135, 0.18);
+  color: #7BC4B0;
+}
