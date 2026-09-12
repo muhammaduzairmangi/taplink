@@ -66,6 +66,13 @@ function wireMobileNav() {
   const nav = document.querySelector(".mobile-nav");
   if (!toggle || !nav) return;
 
+  const closeMenu = () => {
+    nav.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+    toggle.focus();  // return focus for keyboard users
+  };
+
   toggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(isOpen));
@@ -73,11 +80,12 @@ function wireMobileNav() {
   });
 
   nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
-    });
+    link.addEventListener("click", closeMenu);
+  });
+
+  // NEW: Escape key closes the menu
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav.classList.contains("is-open")) closeMenu();
   });
 }
 
