@@ -1,0 +1,7 @@
+# https://www.example.com/robots.txt
+# Replace www.example.com with your real domain before deploying.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.example.com/sitemap.xml

@@ -1,0 +1,16 @@
+{
+  "name": "TapLink NFC",
+  "short_name": "TapLink NFC",
+  "description": "Custom NFC & QR solutions for businesses.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#FAFAF8",
+  "theme_color": "#16181B",
+  "icons": [
+    {
+      "src": "/assets/products/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
