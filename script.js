@@ -6,7 +6,7 @@
 
 const SITE_CONFIG = {
   businessName: "TapLink NFC",
-  whatsappNumber: "9231889736006", // digits only, country code first, no + or spaces
+  whatsappNumber: "923337277937", // digits only, country code first, no + or spaces
   phone: "",
   email: "m.uzairmangi@gmai.com",
   city: "",
