@@ -4,4 +4,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://taplinknfc.netlify.app//sitemap.xml
